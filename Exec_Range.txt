@@ -1,0 +1,70 @@
+toninho@notebook-assus:~$ pry
+[1] pry(main)> intervalo = 1..5
+=> 1..5
+[2] pry(main)> intervalo.include? 3
+=> true
+[3] pry(main)> intervalo.include? 6
+=> false
+[4] pry(main)> intervalo.include? 9
+=> false
+[5] pry(main)> intervalo.include? 2
+=> true
+
+[7] pry(main)> intervalo.each {|i| puts i }
+1
+2
+3
+4
+5
+=> 1..5
+
+
+[8] pry(main)> intervalo.map {|i| i * i }
+=> [1, 4, 9, 16, 25]
+[9] pry(main)> entrada = gets.to_i
+3
+=> 3
+[10] pry(main)> case entrada
+[10] pry(main)* when 1..2 then puts("entre 1 e 2")  
+[10] pry(main)* when 2..5 then puts("entre 2 e 5")  
+[10] pry(main)* else puts "nem uma opção valida"  
+[10] pry(main)* end  
+entre 2 e 5
+=> nil
+[11] pry(main)> entrada = gets.to_i
+6
+=> 6
+[12] pry(main)> case entrada
+[12] pry(main)* when 1..2 then puts("entre 1 e 2")  
+[12] pry(main)* when 2..5 then puts("entre 2 e 5")  
+[12] pry(main)* when 5..9 then puts("entre 5 e 9")  
+[12] pry(main)* else puts "nem uma opção valida"  
+[12] pry(main)* end  
+entre 5 e 9
+=> nil
+[13] pry(main)> def produzir(tamanho = :m, cor = :azul, quantidade)
+[13] pry(main)*   puts "produzindo roupas de tamanho #{tamanho}, cor #{cor} e quantidade #{quantidade}"
+[13] pry(main)* end  
+=> :produzir
+[14] pry(main)> produzir(100)
+produzindo roupas de tamanho m, cor azul e quantidade 100
+=> nil
+[15] pry(main)> produzir(:g, :preto, 10)
+produzindo roupas de tamanho g, cor preto e quantidade 10
+=> nil
+[16] pry(main)> produzir(:g, 10)
+produzindo roupas de tamanho g, cor azul e quantidade 10
+=> nil
+[17] pry(main)> produzir(:gg, 10)
+produzindo roupas de tamanho gg, cor azul e quantidade 10
+=> nil
+[18] pry(main)> produzir(:gg)
+produzindo roupas de tamanho m, cor azul e quantidade gg
+=> nil
+[19] pry(main)> produzir(:gg, :rosa, 200)
+produzindo roupas de tamanho gg, cor rosa e quantidade 200
+=> nil
+[20] pry(main)> produzir()
+ArgumentError: wrong number of arguments (given 0, expected 1..3)
+from (pry):22:in `produzir'
+

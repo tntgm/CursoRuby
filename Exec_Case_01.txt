@@ -1,0 +1,18 @@
+#Caso simples:
+
+
+[1] pry(main)> marca = "tesla"
+=> "tesla"
+[2] pry(main)> case marca
+[2] pry(main)* when "tesla"  
+[2] pry(main)*   puts "TESLA"
+[2] pry(main)* when "ford"  
+[2] pry(main)*   puts "FORD"
+[2] pry(main)* when "fiat"  
+[2] pry(main)*   puts "FIAT"
+[2] pry(main)* else  
+[2] pry(main)*   puts "SEM MARCA"
+[2] pry(main)* end  
+TESLA
+=> nil
+[3] pry(main)> 

@@ -1,0 +1,14 @@
+#tipo de case composto
+
+
+[1] pry(main)> case when 2 < 1
+[1] pry(main)*   puts "2 < 1"
+[1] pry(main)* when 5 > 3  
+[1] pry(main)*   puts "5 > 3"
+[1] pry(main)* else  
+[1] pry(main)*   "Tudo errado"
+[1] pry(main)* end  
+5 > 3
+=> nil
+[2] pry(main)> 
+
